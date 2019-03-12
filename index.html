@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><label for="meterTofoot">Meter</label></th>
+        <th><input type="number" id="meterToFoot" oninput="convertToFoot();"> is</th>
+        <th><span id="resultInFoot"></span></th>
+        <th><span>foot</span></th>
+    </tr>
+
+    <tr>
+        <th><label for="FootToMeter">Foot</label></th>
+        <th><input type="number" id="footToMeter" oninput="convertToMeter();"> is</th>
+        <th><span id="resultInMeter"></span></th>
+        <th><span>meter</span></th>
+    </tr>
+</table>
+
+<script>
+    function convertToFoot() {
+        let meterValue = document.getElementById("meterToFoot").value;
+        let foot = meterValue * 3.279;
+        document.getElementById("resultInFoot").innerHTML = foot;
+    }
+    function convertToMeter() {
+        let footValue = document.getElementById("footToMeter").value;
+        let meter = footValue * 0.305;
+        document.getElementById("resultInMeter").innerHTML = meter;
+    }
+</script>
+</body>
+</html>
